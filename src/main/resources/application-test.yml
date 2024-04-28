@@ -1,0 +1,37 @@
+redis:
+  config:
+    type: cluster # 支持三种redis模式， 分别为 standalone, cluster, sentinel
+    #    type: standalone # 支持三种redis模式， 分别为 standalone, cluster, sentinel
+    nodes:
+      #      - 127.0.0.1:6379
+      - 127.0.0.1:6380
+      - 127.0.0.1:6381
+      - 127.0.0.1:6382
+      - 127.0.0.1:6383
+      - 127.0.0.1:6384
+      - 127.0.0.1:6385
+    password: root
+    pool: #连接池配置
+      maxTotal: 50
+      minIdle: 10
+      maxIdle: 10
+      timeBetweenEvictionRunsMillis: 15000
+      minEvictableIdleTimeMillis: 6000
+
+
+#业务参数
+business:
+  config:
+    scanCount: 1000
+    scanNumberLimit: 100
+    sleepMillis: 20
+    hScanCount: 100
+    hScanNumberLimit: 100
+    hSleepMillis: 10
+    sScanCount: 100
+    sScanNumberLimit: 100
+    sSleepMillis: 10
+    zScanCount: 100
+    zScanNumberLimit: 100
+    zSleepMillis: 10
+    repairCountEveryTime: 1000

@@ -1,0 +1,14 @@
+
+server:
+  port: 10086
+  servlet:
+    context-path: /operation_redis
+
+spring:
+  application:
+    name: operation_redis
+
+
+# 日志配置
+logging:
+  config: classpath:logback.xml
